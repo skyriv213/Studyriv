@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h3>수강분야(다수 선택 가능)</h3>
+        <ul>
+            <li><input type="checkbox" value="grm">문법</li>
+            <li><input type="checkbox" value="wr">작문</li>
+            <li><input type="checkbox" value="rd">독해</li>
+        </ul>
+        <h3>수강과목(1과목만)</h3>
+        <ul>
+            <li>
+                <label><input type="radio" name="subject" value="영어">영어</label>
+            </li>
+            <li> 
+                <label><input type="radio" name="subject" value="ch">중국어</label>
+            </li>
+            <li>
+                <label><input type="radio" name="subject" value="일본어">일본어</label>
+            </li>
+            <!--
+                수강분야의 부분에서는 label 태그를 사용하지 않았기에 텍스트만 클릭시 체크박스가 선택이 되지 않는다.
+                수강과목의 부분에서는 label 태그를 선책했기에 텍스트만 클릭해도 라디오가 선택이 된다.
+                체크박스의 경우 중복선택이 가능하고 그와 다르게 라디오의 경우 단일선택만 가능하다.
+            -->
+        </ul>
+    </form>
+</body>
+</html>

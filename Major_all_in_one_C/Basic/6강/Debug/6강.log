@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Basic\6강\main.c(20,11): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Basic\6강\main.c(6,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  6강.vcxproj -> C:\Users\skyriv\Desktop\Study\Major_all_in_one\Basic\6강\Debug\6강.exe

@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\16강_그래프_깊이 우선 탐색\main.c(34,19): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\16강_그래프_깊이 우선 탐색\main.c(44,18): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\16강_그래프_깊이 우선 탐색\main.c(40,1): warning C4133: '초기화 중': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+  16강_그래프_깊이 우선 탐색.vcxproj -> C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\16강_그래프_깊이 우선 탐색\Debug\16강_그래프_깊이 우선 탐색.exe

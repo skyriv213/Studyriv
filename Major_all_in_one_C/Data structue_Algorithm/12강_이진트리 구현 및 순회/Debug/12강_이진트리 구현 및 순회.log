@@ -1,0 +1,10 @@
+﻿  main.c
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(22,29): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(23,32): warning C4133: '=': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(31,27): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(32,29): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(39,26): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(41,28): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(49,28): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\main.c(50,30): warning C4133: '함수': 'Node *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
+  12강_이진트리 구현 및 순회.vcxproj -> C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\12강_이진트리 구현 및 순회\Debug\12강_이진트리 구현 및 순회.exe
