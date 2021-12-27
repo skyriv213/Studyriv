@@ -1,7 +1,10 @@
 package com.example.HelloSpring.Controller;
 
 
+import com.example.HelloSpring.Controller.DTO.UserRequest;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/get")
@@ -32,6 +35,54 @@ public class GetApiController {
         // 반드시 어노테이션 GetMapping 의 괄호 안에 변수명과 함수 안의 변수명이 동일해야
         System.out.println("PathVariable : " + a + "\t"+ pathName);
         return a + "\t" + pathName;
+    }
+
+
+    @GetMapping(path= "query-param") // 이번 경우에는 키와 벨류가 무엇인지 명시 x
+    public String queryParam(@RequestParam Map<String, String> queryParam){
+
+        StringBuilder sb = new StringBuilder();
+
+        queryParam.entrySet().forEach(entry->{
+             System.out.println(entry.getKey());
+             System.out.println(entry.getValue());
+             System.out.println("\n");
+
+            sb.append(entry.getKey() + " = " +entry.getValue() + "\n");
+
+                 });
+
+
+
+         return sb.toString();
+    }
+
+
+    @GetMapping("query-param02") // 위의 코드와 다르게 키와 벨류의 값으로 뭐가 들어와야하는지 명시를 해줌
+    public String queryParam02(
+            @RequestParam String name,
+            @RequestParam String email,
+            @RequestParam int age
+    ){
+        System.out.println(name);
+        System.out.println(email);
+        System.out.println(age);
+
+        return name + " " + email + " " +age;
+    }
+
+    @GetMapping("query-param03")
+    // 가장 많이 사용하는 방법이자 가장 추천하는 방법
+    // userRequest라는 클래스 및 객체를 만들어 미리 사전에 필요한 값을 명시해준다.
+    // 또한 매개변수로 객체가 들어오게 되면 RequestParam이라는 어노테이션을 붙이지 않는다
+    // 만약 객체에 존재하지 않는 값이 들어오는경우 누락이 되므로 해당부분을 유의해서 디자인해야한다.
+
+    public String queryParam03(UserRequest userRequest){
+        System.out.println( userRequest.getName());
+        System.out.println( userRequest.getEmail());
+        System.out.println( userRequest.getAge());
+
+        return userRequest.toString();
     }
 
     //Query parameter :  검색을 할 때 나오는 여러가지 매개변수 인자를 의미, 주로 검색할 때 사용
