@@ -1,89 +1,67 @@
 package Etc;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Arrays;
-import java.util.Scanner;
+
 
 public class P1990 {
-	
-	
-	static boolean [] barr;
-	static int []arr;
-	
-	static boolean 팰린드롬(int i) {
 		
-		String [] s1 = Integer.toString(i).split("");
-		String [] s2 = new String [s1.length];
-		
-		for(int i1 = 0; i1 < s1.length;i1++) {
-			s2[s1.length-i1]=s1[i1];
+	static	StringBuffer sb = new StringBuffer();
+	static BufferedReader br = new BufferedReader(
+			new InputStreamReader(System.in));
+	static BufferedWriter bw = new BufferedWriter(
+			new OutputStreamWriter(System.out));
+
+	static void number(int x) throws IOException {
+		String s = Integer.toString(x);
+		if(s.equals(new StringBuffer(s).reverse().toString())) {
+			bw.write(Integer.toString(x) + "\n");
 		}
 		
-		boolean flag = false;
-		for(int j = 0 ;j<s1.length;j++) {
-			if(s1[j].equals(s2[j])) {
-				flag = true;
-			}
-			else {
-				flag = false;
-				break;
-			}
-		}
-		if(flag == true) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		
 	}
 	
-	static void 소수(int [] arr) {
-		for(int i = 2; i<arr.length;i++) {
-			if(arr[i]==0) {
+	public static void main(String [] args) throws IOException {
+		
+		String [] s = br.readLine().split(" ");
+				
+		int a = Integer.parseInt(s[0]);
+		int b = Integer.parseInt(s[1]);
+		
+		// 배열의 크기는 b까지 담아야하므로 크기를 지정
+		boolean [] arr1 = new boolean [b+1];
+		
+		//초기값은 전부다 true로 지정
+		Arrays.fill(arr1, true);
+		// 0,1은 체크하지않을 예정이므로 false로 지정
+		arr1[0] = arr1[1]= false;
+		
+		// 에라토스테네스의 체 설정
+		for(int i = 2 ; i <= b;i++) {
+			// false일시 과정을 체크하지않고 바로 넘어가기
+			if(arr1[i]==false) {
 				continue;
 			}
-			for(int j=i*i;j<arr.length;j+=i) {
-				arr[j]=0;
+			// false 체크 해주기
+			for(int  j = i*2;j<=b;j+=i) {
+				arr1[j]=false;
+			}
+			if(arr1[i]==true && i>=a) {
+				number(i);
 			}
 		}
-
-	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		StringBuilder sb = new StringBuilder();
+		
+		bw.write(Integer.toString(-1));
+		bw.flush();
+		bw.close();
 	
-		int n  = sc.nextInt();
-		int m =  sc.nextInt();
-		
-		barr = new boolean[m+1];
-		arr = new int [m+1];
-		
-		for(int  i = 0;i<=m;i++) {
-			if(n<2) {
-				arr[i] = 0;
-			}
-			else {
-				arr[i]=i;
-			}
-		}
-		소수(arr);
-		Arrays.fill(barr, false);
-		
-		for(int i =n;i <=m;i++) {
-			barr[i]=팰린드롬(i);
-		}
-		
-		for(int z = n ; z<=m;z++) {
-			if(barr[z]==true && arr[z]!=0) {
-				sb.append(z + "\n");
-			}
-		}
-		sb.append("-1");
-		System.out.println(sb);
 		
 		
-		
+
 		
 
 	}
