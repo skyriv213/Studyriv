@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class P11718_11719 {
+public class P11719 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
