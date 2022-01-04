@@ -10,7 +10,6 @@ import java.util.Arrays;
 
 public class P1990 {
 		
-	static	StringBuffer sb = new StringBuffer();
 	static BufferedReader br = new BufferedReader(
 			new InputStreamReader(System.in));
 	static BufferedWriter bw = new BufferedWriter(
@@ -21,7 +20,6 @@ public class P1990 {
 		if(s.equals(new StringBuffer(s).reverse().toString())) {
 			bw.write(Integer.toString(x) + "\n");
 		}
-		
 		
 	}
 	
@@ -59,9 +57,6 @@ public class P1990 {
 		bw.flush();
 		bw.close();
 	
-		
-		
-
 		
 
 	}
