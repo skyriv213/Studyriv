@@ -46,7 +46,8 @@ public class P11724 {
 		int count  =0 ;
 		for(int i = 1; i <=n;i++) {
 			// i가 진행이 되면서 연결된 부분은 check 배열에서 이미 true로 걸러진다. 
-			// 그러므로 check[]에서 true가 아닌 부분의 경우
+			// 그러므로 check[]에서 true가 아닌 부분의 경우 연결된 요소가 없는 새롭게 모여있는 부분이란 의미이다.
+			// 이런 부분에서 DFS를 재실행 및 count를 하나씩 증가시킨다.
 			if(check[i]!=true) {
 			DFS(i);
 			count++;
