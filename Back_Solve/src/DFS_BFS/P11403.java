@@ -49,7 +49,7 @@ public class P11403 {
 			System.out.println();
 		}
 		
-		s
+		
 		sc.close();
 	}
 
