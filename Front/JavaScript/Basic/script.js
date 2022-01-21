@@ -1,3 +1,4 @@
+
 alert("hi");
 // 상수 바뀌지 않는 값
 const x = 5;
@@ -12,8 +13,24 @@ const player = {
     fat : false
 }
 console.log(player);
+
+player.fat = true;
+
+console.log(player);
+
+player.point = player.point*15
+
+console.log(player.point);
+
 console.log(player.name);
 console.log(player.fat);
 console.log(player.age);
-console.log(player.point);
+
+function sya(){
+    alert("hihihihihi")
+}
+
+console.log(sya());
+
+
 
