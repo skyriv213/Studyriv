@@ -40,7 +40,7 @@ public class P10816 {
 			test[i]= Integer.parseInt(s1[i]);
 		}
 	
-		// 각 인덱스 배열에 음수의 최소값을 넣고 수를 더하여 출력
+		// 각 인덱스 배열에 음수의 최소값을 넣고 수를 더하여 출력ㄴ
 		for(int i = 0 ; i < test.length;i++) {
 			bw.write(counting [test[i]+10000000] +" ");  
 		}
