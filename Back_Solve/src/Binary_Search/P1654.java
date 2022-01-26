@@ -1,5 +1,13 @@
 package Binary_Search;
 
+/*
+ * 이분탐색의 upper/lower의 경우에도 
+ * 중간의 식을 구성하는 부분이 중요. 
+ * 중간의 식 구성하는데 현재 어려움을 겪음 
+ * 
+ */
+
+
 import java.util.Arrays;
 import java.util.Scanner;
 
