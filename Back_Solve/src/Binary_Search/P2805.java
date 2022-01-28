@@ -55,8 +55,8 @@ public class P2805 {
 				}
 				
 			}
-		
-		System.out.println(start);
+		// 시작점을 
+		System.out.println(end);
 		
 		
 	

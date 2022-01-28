@@ -29,6 +29,7 @@ public class P1654 {
 			arr[i]=sc.nextInt();
 		}
 		
+		
 		Arrays.sort(arr);
 		// Bin 메소드에 배열과 길이를 넣어서 
 		
@@ -50,17 +51,18 @@ public class P1654 {
 				count += arr[i]/mid;
 			}
 			
-			
 			// 만약 count가 n보다 크거나 작으면 시작값을 증가
 			if(count >= n) {
 				start = mid+1;
 				
 			}
+			
 			// 반대의 경우 마무리값을 감소
 			else if(count <n) {
 				end= mid-1;
 			}
 		}
+		
 		 // start의 경우 n과 크기가 같아질때까지 +1을 하기때문에 end값을 출력해야 원하는 값을 출력할 수 있다. 
 		// 실제로 start 값을 출력하려고 하면 예제 입력시 201이 등장한다
 		System.out.println(end);
