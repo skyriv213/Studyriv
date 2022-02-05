@@ -6,16 +6,16 @@ plugins {
 
 group = 'hello'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '11' // java 버전
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // 템플릿 앤진
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 설정으로 받아온 web pack
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 추가적으로 같이 오는 test 라이브러리
 }
 
 tasks.named('test') {

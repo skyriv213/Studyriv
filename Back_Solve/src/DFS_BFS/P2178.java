@@ -19,6 +19,8 @@ public class P2178 {
 
 	static void find(int x,int y) {
 		
+		
+		// int형 배열을 입력 받는 queue를 선언
 		Queue <int []> q = new LinkedList<>();
 		q.add(new int [] {x,y});
 		
