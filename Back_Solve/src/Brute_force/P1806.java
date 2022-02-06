@@ -16,7 +16,7 @@ public class P1806 {
 		}
 
 		// 변수 지정 , 수열의 합을 저장할 sum과 수열의 길이를 체크할 count
-		int min = 9999;
+		int min = Integer.MAX_VALUE;
 		int start = 0;
 		int end = 0;
 		int sum= 0;
@@ -29,17 +29,16 @@ public class P1806 {
 			}
 			// sum이 s보다 작을경우, end 값을
 			if(sum < s ) {
-				sum += arr[end];
-				end++;
+				// end의 인덱스 값을 더해주고 end 값은 계산 후 추가
+				sum += arr[end++];
 			}
 			// sum이 s보다 클경우
 			else {
-				// start의 지점을 늘려주고, 그 지점 값을 빼준다
-				start++;
-				sum -= arr[start];
+				// 기존 값을 sum에서 빼주고 start의 값을 하나 증가
+				sum -= arr[start++];
 			}
 		}
-		if(min == 9999) {
+		if(min == Integer.MAX_VALUE) {
 			System.out.println(0);
 		}
 		else {
