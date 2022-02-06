@@ -14,12 +14,13 @@ public class P1644 {
 		N = sc.nextInt();
 		arr = new boolean[N + 1];
 		list = new ArrayList<>();
+		Arrays.fill(arr, true);
 
-		arr[0] = arr[1] = true;
+		arr[0] = arr[1] = false;
 		for (int i = 2; i * i <= N; i++) {
-			if (!arr[i]) {
+			if (arr[i]) {
 				for (int j = i * i; j <= N; j += i) {
-					arr[j] = true;
+					arr[j] = false;
 				}
 			}
 		}
@@ -28,7 +29,7 @@ public class P1644 {
 		// 소수를 리스트에 넣어주기
 
 		for (int i = 0; i <= N; i++) {
-			if (!arr[i]) {
+			if (arr[i]) {
 				list.add(i);
 			}
 		}
