@@ -30,8 +30,9 @@ public class P1260 {
 	
 	static void DFS(int num) {
 		Stack <Integer> s = new Stack<>();
-		s.push(num);
 		check2[num] = true;
+		s.push(num);
+
 		System.out.print(num+ " ");
 		
 		while(!s.isEmpty()) {
