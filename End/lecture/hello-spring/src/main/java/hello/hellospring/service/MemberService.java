@@ -9,12 +9,15 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
 
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /*
-    회원가입
-     */
+        회원가입
+         */
     public Long join(Member member){
         // 같은 이름이 있는 중복 회원 x
         validateDuplicateMember(member); // 중복회원 검증
@@ -37,7 +40,7 @@ public class MemberService {
         return memberRepository.findALl();
     }
     public Optional<Member> findOne(Long memberId){
-        return memberRepository.findById();
+        return memberRepository.findById(memberId);
     }
 
 
