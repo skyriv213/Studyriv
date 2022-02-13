@@ -35,8 +35,7 @@ public class P1753 {
 		// 입력값에 따라 그래프 초기화
 		for (int i = 0; i < Integer.parseInt(s[1]); i++) {
 			String[] t = br.readLine().split(" ");
-			graph.get(Integer.parseInt(t[0]))
-			.add(new Node(Integer.parseInt(t[1]), Integer.parseInt(t[2])));
+			graph.get(Integer.parseInt(t[0])).add(new Node(Integer.parseInt(t[1]), Integer.parseInt(t[2])));
 		}
 		dijkstra(start);
 
@@ -59,10 +58,12 @@ public class P1753 {
 		ans[index] = 0;
 		// 처음 자기 자신을 넣을 때 자기 자신의 값은 0이므로 0값을 넣어준다.
 		pq.offer(new Node(index, 0));
+
 		
 		while (!pq.isEmpty()) {
 			// Queue에서 노드 꺼내기
 			Node node = pq.poll();
+			// 노드의 성분으로 각각의 변수 선언해주기
 			int ni = node.index;
 			int dis = node.distance;
 			// 불러온 값이 ans보다 클 경우 바로 다음 부분으로 넘어간다
@@ -75,7 +76,7 @@ public class P1753 {
 				if (dis + n.distance < ans[n.index]) {
 					ans[n.index] = dis + n.distance;
 					// 그리고 해당 값의 노드를 Queue에 넣어준다. 넣어줄때 해당값의 거리 가중치는 ans값을 넣어준다
-					pq.offer(new Node(n.index,ans[n.index]));
+					pq.offer(new Node(n.index, ans[n.index]));
 				}
 			}
 		}
