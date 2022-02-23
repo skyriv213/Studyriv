@@ -15,10 +15,13 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // 템플릿 앤진
 	implementation 'org.springframework.boot:spring-boot-starter-web' // 설정으로 받아온 web pack
+
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.h2database:h2' //DB랑 붙을때 필요한 클라이언트
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 추가적으로 같이 오는 test 라이브러리
 
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	runtimeOnly 'com.h2database:h2' //DB랑 붙을때 필요한 클라이언트
 }
 
 tasks.named('test') {
