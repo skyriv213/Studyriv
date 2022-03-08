@@ -11,11 +11,19 @@ import hello.core.order.OrderServiceImpl;
 public class AppConfig {
 
     public MemberService memberService(){
-        return new MemberServiceImpl(new MemoryMemberRepository());
+        return new MemberServiceImpl(MemberRepository());
+    }
+
+    private MemoryMemberRepository MemberRepository() {
+        return new MemoryMemberRepository();
     }
 
     public OrderService orderService() {
-        return new OrderServiceImpl(new MemoryMemberRepository(), new RateDiscountPolicy());
+        return new OrderServiceImpl(MemberRepository(), DiscountPolicy());
+    }
+
+    private RateDiscountPolicy DiscountPolicy() {
+        return new RateDiscountPolicy();
     }
 
 
