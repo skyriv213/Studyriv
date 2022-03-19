@@ -21,9 +21,9 @@ public class ApplicationContextExtendsFindTest {
     @Test
     @DisplayName("부모 타입으로 조회, 자식이 둘 이상 있으면, 중복 오류가 발생한다.")
     void findBeanByParentTypeDuplicate() {
-        DiscountPolicy bean = ac.getBean(DiscountPolicy.class);
+       // DiscountPolicy bean = ac.getBean(DiscountPolicy.class); // bean을 조회하는 순간 조건에 맞는 bean이 두개가 나온다. 이러한 경우 assertThrows를 할용하여 오류구문을 버린다
         assertThrows(NoUniqueBeanDefinitionException.class,
-                () -> ac.getBean(DiscountPolicy.class));
+                () -> System.out.print(ac.getBean(DiscountPolicy.class)));
     }
 
     @Test
