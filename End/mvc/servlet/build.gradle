@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.6'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	// provideRuntime의 경우 별도의 런타임 환경에서 라이브러리가 제공이 된다는 의미이다.
+	// 이 부분을 실행 시 별도의 톰캣 서버를 띄우고 그 서버에 빌드된 결과를 두고 실행을 하게 된다
+	// 이 때 spring 부트의 경우 내부에 내장 톰켓 서버가 있기에 충돌로 인해 문제가 발생하는것이다.
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
