@@ -1,9 +1,9 @@
-package hello.servlet.web.frontcontroller.V2;
+package hello.servlet.web.frontcontroller.v2;
 
-import hello.servlet.web.frontcontroller.Myview;
-import hello.servlet.web.frontcontroller.V2.controller.MemberFormControllerV2;
-import hello.servlet.web.frontcontroller.V2.controller.MemberListControllerV2;
-import hello.servlet.web.frontcontroller.V2.controller.MemberSaveControllerV2;
+import hello.servlet.web.frontcontroller.MyView;
+import hello.servlet.web.frontcontroller.v2.controller.MemberFormControllerV2;
+import hello.servlet.web.frontcontroller.v2.controller.MemberListControllerV2;
+import hello.servlet.web.frontcontroller.v2.controller.MemberSaveControllerV2;
 
 
 import javax.servlet.ServletException;
@@ -39,7 +39,7 @@ public class FrontControllerServletV2 extends HttpServlet {
             return;
         }
 
-        Myview view = controller.process(request, response);
+        MyView view = controller.process(request, response);
         view.render(request, response);
 
     }
