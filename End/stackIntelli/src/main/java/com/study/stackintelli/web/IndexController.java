@@ -1,5 +1,6 @@
 package com.study.stackintelli.web;
 
+import com.study.stackintelli.config.auth.LoginUser;
 import com.study.stackintelli.config.auth.dto.SessionUser;
 import com.study.stackintelli.domain.posts.PostsService;
 import com.study.stackintelli.web.dto.PostsResponseDto;
@@ -19,9 +20,10 @@ public class IndexController {
 
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
+        // 기존에 (User) httpSession.getAttribute("user)로 개선
+        // 어느 컨트롤러든지 @LoginUser만 사용하면 세션 정보를 가져올 수 있게 되었다.
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
