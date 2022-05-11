@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 모두 인증된 사용자들에게만 허용되게 한다.
                 .and()
                 .logout() //
-                    .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/")
                 .and()
                 .oauth2Login()
                 .userInfoEndpoint()

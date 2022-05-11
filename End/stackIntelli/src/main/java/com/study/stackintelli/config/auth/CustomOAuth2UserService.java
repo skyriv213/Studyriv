@@ -1,5 +1,7 @@
 package com.study.stackintelli.config.auth;
 
+import com.study.stackintelli.config.auth.dto.OAuthAttributes;
+import com.study.stackintelli.config.auth.dto.SessionUser;
 import com.study.stackintelli.domain.user.User;
 import com.study.stackintelli.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -45,7 +47,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 .getUserNameAttributeName();
 
         //네이버 등 다른 소셜 로그인의 경우에도 이 클래스를 사용
-        OAuthAttibutes attibutes = OAuthAttributes
+        OAuthAttributes attributes = OAuthAttributes
                 .of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
         User user = saveOrUpdate(attributes);
@@ -56,8 +58,8 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         return new DefaultOAuth2User(
                 Collections.singleton(
                         new SimpleGrantedAuthority(user.getRoleKey())),
-                attibutes.getAttributes(),
-                attibutes.getNameAttributeKey());
+                attributes.getAttributes(),
+                attributes.getNameAttributeKey());
     }
 
     private User saveOrUpdate(OAuthAttributes attributes) {
@@ -66,5 +68,5 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 .orElse(attributes.toEntity());
         return userRepository.save(user);
     }
-    }
 }
+

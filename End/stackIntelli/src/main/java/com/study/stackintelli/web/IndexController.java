@@ -1,5 +1,6 @@
 package com.study.stackintelli.web;
 
+import com.study.stackintelli.config.auth.dto.SessionUser;
 import com.study.stackintelli.domain.posts.PostsService;
 import com.study.stackintelli.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -8,16 +9,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequiredArgsConstructor
 public class IndexController {
     private final PostsService postsService;
+    private final HttpSession httpSession;
+
 
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
+        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "index";
     }
+
 
     @GetMapping("/posts/save")
     public String postsSave() {
@@ -31,4 +41,6 @@ public class IndexController {
 
         return "posts-update";
     }
+
+
 }
