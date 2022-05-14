@@ -5,6 +5,7 @@ import com.study.stackintelli.domain.posts.PostsRepository;
 import com.study.stackintelli.web.dto.PostsSaveRequestDto;
 import com.study.stackintelli.web.dto.PostsUpdateRequestDto;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Before;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,10 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvcBuilder;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.util.List;
 
@@ -36,12 +41,26 @@ class PostApiControllerTest {
     @Autowired
     private PostsRepository postsRepository;
 
+    @Autowired
+    private WebApplicationContext context;
+
+    private MockMvc mvc;
+
+    @Before
+    public void setup() {
+        mvc = MockMvcBuilders
+                .webAppContextSetup(context)
+                .apply(springSecurity())
+                .build();
+    }
+
     @AfterEach
     void tearDown() throws Exception {
         postsRepository.deleteAll();
     }
 
     @Test
+    @WithMockUser(roles="USER")
     void save() throws Exception {
         String title = "title";
         String content = "content";
@@ -66,6 +85,7 @@ class PostApiControllerTest {
     }
 
     @Test
+    @WithMockUser(roles="USER")
     void update() throws Exception {
         Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")
