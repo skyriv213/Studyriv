@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import static org.assertj.core.api.Assertions.*;
 
-public class SingletonTest {
+public class  SingletonTest {
 
     @Test
     @DisplayName("Spring 없는 순수한 DI 컨테이너")
