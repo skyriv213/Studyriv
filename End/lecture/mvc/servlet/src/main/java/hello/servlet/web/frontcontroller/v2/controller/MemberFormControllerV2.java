@@ -12,6 +12,7 @@ public class MemberFormControllerV2 implements ControllerV2 {
 
     @Override
     public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // myview 객체를 만들어서 반환
         return new MyView("/WEB-INF/views/new-form.jsp");
     }
 }
