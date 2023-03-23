@@ -20,7 +20,7 @@ public class MessageSourceTest {
   @Test
   void helloMessage(){
     String hello = messageSource.getMessage("hello", null, null);
-    assertThat(hello).isEqualTo("??");
+    assertThat(hello).isEqualTo("안녕");
   }
 
   @Test
@@ -38,13 +38,13 @@ public class MessageSourceTest {
   @Test
   void argMessage(){
     String message = messageSource.getMessage("hello.name", new Object[]{"Spring"}, null);
-    assertThat(message).isEqualTo("?? Spring");
+    assertThat(message).isEqualTo("안녕 Spring");
   }
 
   @Test
   void defaultLang(){
-    assertThat(messageSource.getMessage("hello", null, null)).isEqualTo("??");
-    assertThat(messageSource.getMessage("hello", null, Locale.KOREA)).isEqualTo("??");
+    assertThat(messageSource.getMessage("hello", null, null)).isEqualTo("안녕");
+    assertThat(messageSource.getMessage("hello", null, Locale.KOREA)).isEqualTo("안녕");
   }
 
   @Test
