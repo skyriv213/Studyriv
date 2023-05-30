@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8a38c0-178b-4bf0-b70c-92a26f246eca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/baisic-kafka/src/main/java/io/conduktor/demos/kafka/ProducerDemoWithCallBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -69,9 +70,22 @@
       <recent name="io.conduktor.demos.kafka" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProducerDemoWithCallBack">
+  <component name="RunManager" selected="Application.ProducerDemoKeys">
     <configuration name="ProducerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.conduktor.demos.kafka.ProducerDemo" />
+      <module name="kafka-biginners-course.baisic-kafka.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.conduktor.demos.kafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerDemoKeys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.conduktor.demos.kafka.ProducerDemoKeys" />
       <module name="kafka-biginners-course.baisic-kafka.main" />
       <extension name="coverage">
         <pattern>
@@ -98,6 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProducerDemoKeys" />
         <item itemvalue="Application.ProducerDemoWithCallBack" />
         <item itemvalue="Application.ProducerDemo" />
       </list>
@@ -112,26 +127,11 @@
       <option name="presentableId" value="Default" />
       <updated>1685366905237</updated>
       <workItem from="1685366906660" duration="4813000" />
-      <workItem from="1685404111927" duration="1029000" />
+      <workItem from="1685404111927" duration="2149000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/baisic-kafka/src/main/java/io/conduktor/demos/kafka/ProducerDemoWithCallBack.java</url>
-          <line>16</line>
-          <properties class="io.conduktor.demos.kafka.ProducerDemoWithCallBack" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
