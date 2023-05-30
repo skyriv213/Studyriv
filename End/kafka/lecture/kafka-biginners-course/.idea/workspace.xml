@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8a38c0-178b-4bf0-b70c-92a26f246eca" name="Changes" comment="" />
+    <list default="true" id="7c8a38c0-178b-4bf0-b70c-92a26f246eca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baisic-kafka/src/main/java/io/conduktor/demos/kafka/ConsumerDemoWithShutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/baisic-kafka/src/main/java/io/conduktor/demos/kafka/ConsumerDemoWithShutdown.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +69,7 @@
       <recent name="io.conduktor.demos.kafka" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ConsumerDemoWithShutdown">
+  <component name="RunManager" selected="Application.ProducerDemoKeys">
     <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.conduktor.demos.kafka.ConsumerDemo" />
       <module name="kafka-biginners-course.baisic-kafka.main" />
@@ -80,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsumerDemoWithShutdown" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ConsumerDemoWithShutdown" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.conduktor.demos.kafka.ConsumerDemoWithShutdown" />
       <module name="kafka-biginners-course.baisic-kafka.main" />
       <extension name="coverage">
@@ -132,10 +135,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ConsumerDemo" />
+      <item itemvalue="Application.ConsumerDemoWithShutdown" />
+      <item itemvalue="Application.ProducerDemo" />
+      <item itemvalue="Application.ProducerDemoKeys" />
+      <item itemvalue="Application.ProducerDemoWithCallBack" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConsumerDemoWithShutdown" />
         <item itemvalue="Application.ProducerDemoKeys" />
+        <item itemvalue="Application.ConsumerDemoWithShutdown" />
         <item itemvalue="Application.ConsumerDemo" />
         <item itemvalue="Application.ProducerDemoWithCallBack" />
         <item itemvalue="Application.ProducerDemo" />
@@ -151,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685366905237</updated>
       <workItem from="1685366906660" duration="4813000" />
-      <workItem from="1685404111927" duration="6840000" />
+      <workItem from="1685404111927" duration="8422000" />
     </task>
     <servers />
   </component>
