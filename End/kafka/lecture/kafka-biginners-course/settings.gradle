@@ -1,3 +1,5 @@
 rootProject.name = 'kafka-biginners-course'
 include 'baisic-kafka'
+include 'kafka-producer-wikimedia'
+include 'kafka-consumer-opensearch'
 
