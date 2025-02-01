@@ -1,5 +1,0 @@
-﻿  main.c
-C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\10강_기수정렬\main.c(46,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
-C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\10강_기수정렬\main.c(48,8): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\10강_기수정렬\main.c(39,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-  10강_기수정렬.vcxproj -> C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\10강_기수정렬\Debug\10강_기수정렬.exe

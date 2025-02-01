@@ -1,4 +1,0 @@
-﻿  main.c
-C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\7강\main.c(38,8): warning C4013: 'system'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\7강\main.c(17): warning C4716: 'swap': 값을 반환해야 합니다.
-  7강.vcxproj -> C:\Users\skyriv\Desktop\Study\Major_all_in_one\Data structue_Algorithm\7강\Debug\7강.exe
