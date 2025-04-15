@@ -1,6 +1,4 @@
-package com.example.javabasic.ch00;
-
-import java.util.stream.Stream;
+package com.example.javabasic.object;
 
 public class IPhone implements Phone {
 

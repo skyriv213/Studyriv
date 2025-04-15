@@ -1,10 +1,10 @@
-package com.example.javabasic.ch01;
+package com.example.javabasic.FunctionAndLambda;
 
 
 @FunctionalInterface
-public interface RunSomething {
+public interface RunSomething2 {
 
-    void doIt();
+    int doIt(int number);
 
 
     static void printName(){

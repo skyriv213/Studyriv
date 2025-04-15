@@ -1,4 +1,4 @@
-package com.example.javabasic.ch01;
+package com.example.javabasic.FunctionAndLambda;
 
 import java.util.function.Function;
 

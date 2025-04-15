@@ -1,4 +1,4 @@
-package com.example.javabasic.ch01;
+package com.example.javabasic.FunctionAndLambda;
 
 import java.util.function.*;
 
@@ -13,24 +13,35 @@ public class Foo2 {
         // 타입 지정 함수
         Function<Integer, Integer> multiply2 = (i) -> i * 2;
 
-        // plus(multi())
+        // plus(multi()) -> 10 * 2 +10 mul -> plus
         Function<Integer, Integer> multiAndPlus = plus10.compose(multiply2);
 
         System.out.println("multiAndPlus = " + multiAndPlus.apply(10));
 
-        //
+        // andThen 입력값이 들어오면 그 다음 함수로 진행 multiply(plus) 10 + 2 -> *2 = 24 plus -> multi
         Function<Integer, Integer> multiAndPlus2 = plus10.andThen(multiply2);
 
         System.out.println("multiAndPlus2 = " + multiAndPlus2.apply(2));
 
 
         Consumer<Integer> printT = (i) -> System.out.println("i = " + i);
+        printT.accept(10);
 
         Supplier<Integer> get10 = () -> 10;
-        printT.accept(get10.get());
+        get10.get();
 
         Predicate<String> startsWithMinsoo = (s) -> s.startsWith("minsoo");
+        System.out.println(startsWithMinsoo.test("minsoo"));
         Predicate<Integer> isEven = (i) -> i % 2 == 0;
+        System.out.println(isEven.test(2));
+
+        UnaryOperator<Integer> plus20 = (i) -> i * 20;
+        System.out.println(plus20.apply(20));
+        UnaryOperator<String> printMinsoo = (s) -> "minsoo" + s;
+        System.out.println(printMinsoo.apply("minsoo"));
+
+        BiFunction<Integer,Integer,Integer> plus30 = (i,j) -> i+j;
+        System.out.println(plus30.apply(10,20));
 
         int basicNumber = 10;
         // 익명 내부 클래스 anonymous inner class

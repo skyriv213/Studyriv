@@ -1,6 +1,6 @@
-package com.example.javabasic.ch00.customer;
+package com.example.javabasic.object.customer;
 
-import com.example.javabasic.ch00.menu.drink.Drink;
+import com.example.javabasic.object.menu.drink.Drink;
 
 import java.time.LocalDate;
 

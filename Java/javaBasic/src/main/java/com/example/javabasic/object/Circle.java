@@ -1,4 +1,4 @@
-package com.example.javabasic.ch00;
+package com.example.javabasic.object;
 
 public class Circle extends Shape {
     int i = 1;

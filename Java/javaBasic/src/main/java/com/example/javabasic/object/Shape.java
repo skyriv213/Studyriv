@@ -1,4 +1,4 @@
-package com.example.javabasic.ch00;
+package com.example.javabasic.object;
 
 public abstract class Shape{ //  추상 클래스 선언
     public Shape(){}

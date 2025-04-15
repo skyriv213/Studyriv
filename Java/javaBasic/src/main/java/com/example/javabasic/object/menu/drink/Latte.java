@@ -1,17 +1,17 @@
-package com.example.javabasic.ch00.menu.drink;
+package com.example.javabasic.object.menu.drink;
 
-public class MilkTea implements Drink {
+public class Latte implements Drink {
     public int price, ml, kcal;
     public Temperature temperature;
 
-    public MilkTea(int ml, Temperature temperature) {
+    public Latte(int ml, Temperature temperature) {
         this.ml = ml;
         this.temperature = temperature;
         if (temperature == Temperature.HOT) {
-            this.price = 3400;
-            this.kcal = 650;
+            this.price = 3500;
+            this.kcal = 250;
         } else {
-            this.price = 4400;
+            this.price = 4000;
             this.kcal = 480;
         }
     }

@@ -1,4 +1,4 @@
-package com.example.javabasic.ch00;
+package com.example.javabasic.object;
 
 public interface Phone {
     final int Button =3; // 가능

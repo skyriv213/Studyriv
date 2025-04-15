@@ -1,14 +1,12 @@
-package com.example.javabasic.ch00;
+package com.example.javabasic.object;
 
-import com.example.javabasic.ch00.customer.Customer;
-import com.example.javabasic.ch00.customer.TakeOrSeats;
-import com.example.javabasic.ch00.menu.drink.Americano;
-import com.example.javabasic.ch00.menu.drink.Drink;
+import com.example.javabasic.object.customer.Customer;
+import com.example.javabasic.object.customer.TakeOrSeats;
+import com.example.javabasic.object.menu.drink.Americano;
+import com.example.javabasic.object.menu.drink.Drink;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Cafe {
 

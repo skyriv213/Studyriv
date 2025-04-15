@@ -1,4 +1,4 @@
-package com.example.javabasic.ch01;
+package com.example.javabasic.FunctionAndLambda;
 
 public class Foo {
     public static void main(String[] args) {
@@ -9,8 +9,9 @@ public class Foo {
                 System.out.println("hello");
             }
         };
+        runSomething1.doIt();
 
-        RunSomething runSomething2 = () -> System.out.println("hello");
+        RunSomething runSomething2 = () -> System.out.println("hello"); // 함수형 인터페이스를 인라인으로 구현한 오브젝트
 
         RunSomething runSomething3 = () -> {
             System.out.println("hello");

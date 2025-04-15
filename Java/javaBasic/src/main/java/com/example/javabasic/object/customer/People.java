@@ -1,4 +1,4 @@
-package com.example.javabasic.ch00.customer;
+package com.example.javabasic.object.customer;
 
 public interface People {
     int getMoney();

@@ -1,4 +1,4 @@
-package com.example.javabasic.ch00.menu.drink;
+package com.example.javabasic.object.menu.drink;
 
 public interface Drink {
     int getPrice();
