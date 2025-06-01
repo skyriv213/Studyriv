@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ms0
+  profiles:
+    active: dev
+  config:
+    import: optional:configserver:http://admin:1234@localhost:9000
+
+#server:
+#  port: ${server.port}
