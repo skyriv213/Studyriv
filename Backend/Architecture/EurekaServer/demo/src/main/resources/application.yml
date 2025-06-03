@@ -1,0 +1,7 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false # 유레카 서버가 자기자신을 체크하는 경우
+    fetch-registry: false
