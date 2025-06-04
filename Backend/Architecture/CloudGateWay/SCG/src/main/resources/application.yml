@@ -1,3 +1,22 @@
 service:
   ms1: http://localhost:8081
-  ms2: http://localhost:8082
+#  ms2: http://localhost:8082
+
+#
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: ms1
+#          uri: lb://MS1
+#          predicates:
+#            - Path=/ms1/**
+#          filters:
+#            - StripPrefix=1
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:1234@localhost:8761/eureka

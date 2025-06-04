@@ -11,8 +11,8 @@ public class ScgApplication {
     @Value("${service.ms1}")
     private String serviceMs1;
 
-    @Value("${service.ms2}")
-    private String serviceMs2;
+//    @Value("${service.ms2}")
+//    private String serviceMs2;
 
     public static void main(String[] args) {
         SpringApplication.run(ScgApplication.class, args);
@@ -21,7 +21,7 @@ public class ScgApplication {
     @PostConstruct
     public void init(){
         System.out.println(serviceMs1);
-        System.out.println(serviceMs2);
+//        System.out.println(serviceMs2);
     }
 
 }
